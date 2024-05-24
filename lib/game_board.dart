@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:game/game_controller.dart';
 import 'package:provider/provider.dart';
+import 'game_controller.dart';
 
 class GameBoard extends StatelessWidget {
   const GameBoard({super.key});

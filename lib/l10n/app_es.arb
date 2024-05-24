@@ -1,0 +1,3 @@
+{
+    "appTitle": "{name, select, title{Juego de memoria} other{}}"
+}
