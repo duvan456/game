@@ -19,9 +19,9 @@ class GameBoard extends StatelessWidget {
           onTap: () => gameController.flipCard(card),
           child: Card(
             child: Center(
-              child: Text(card.isFlipped || card.isMatched
-                  ? card.identifier
-                  : ''),
+              child: card.isFlipped || card.isMatched
+                  ? Image.asset(card.imagePath)
+                  : Container(),
             ),
           ),
         );

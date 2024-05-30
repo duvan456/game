@@ -1,7 +1,7 @@
 class CardModel {
-  final String identifier;
+  final String imagePath;
   bool isFlipped;
   bool isMatched;
 
-  CardModel({required this.identifier, this.isFlipped = false, this.isMatched = false});
+  CardModel({required this.imagePath, this.isFlipped = false, this.isMatched = false});
 }

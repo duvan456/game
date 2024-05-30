@@ -96,8 +96,20 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In es, this message translates to:
-  /// **'{name, select, title{Juego de memoria} other{}}'**
-  String appTitle(String name);
+  /// **'Mi Aplicación'**
+  String get appTitle;
+
+  /// No description provided for @changeLanguageButton.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar Idioma'**
+  String get changeLanguageButton;
+
+  /// No description provided for @title.
+  ///
+  /// In es, this message translates to:
+  /// **'{name, select, titleGame{Juego de memoria} other{}}'**
+  String title(String name);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -10,9 +10,26 @@ class GameController extends ChangeNotifier {
   }
 
   void _initializeCards() {
-    List<String> identifiers = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-    _cards = [...identifiers, ...identifiers]
-        .map((id) => CardModel(identifier: id))
+    List<String> imagePaths = [
+      'assets/images/a.png',
+      'assets/images/b.png',
+      'assets/images/c.png',
+      'assets/images/d.png',
+      'assets/images/e.png',
+      'assets/images/f.png',
+      'assets/images/g.png',
+      'assets/images/h.png',
+      'assets/images/a.png',
+      'assets/images/b.png',
+      'assets/images/c.png',
+      'assets/images/d.png',
+      'assets/images/e.png',
+      'assets/images/f.png',
+      'assets/images/g.png',
+      'assets/images/h.png',
+    ];
+    _cards = imagePaths
+        .map((path) => CardModel(imagePath: path))
         .toList();
     _cards.shuffle();
   }
@@ -28,7 +45,7 @@ class GameController extends ChangeNotifier {
     if (_selectedCard == null) {
       _selectedCard = card;
     } else {
-      if (_selectedCard!.identifier == card.identifier) {
+      if (_selectedCard!.imagePath == card.imagePath) {
         _selectedCard!.isMatched = true;
         card.isMatched = true;
         _selectedCard = null; 

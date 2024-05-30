@@ -1,3 +1,6 @@
 {
-    "appTitle": "{name, select, title{Memory match game} other{}}"
+    "@@locale": "en",
+    "appTitle": "My App",
+    "changeLanguageButton": "Change Language",
+    "title": "{name, select, titleGame{Memory Match Game} other{}}"
 }

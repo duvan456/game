@@ -7,11 +7,17 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String appTitle(String name) {
+  String get appTitle => 'My App';
+
+  @override
+  String get changeLanguageButton => 'Change Language';
+
+  @override
+  String title(String name) {
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
-        'title': 'Memory match game',
+        'titleGame': 'Memory Match Game',
         'other': '',
       },
     );
