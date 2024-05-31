@@ -13,7 +13,7 @@ dependencies:
 
   # Utility Packages
   http: ^1.2.0
-  intl: ^0.19.0
+  intl: ^0.18.1
   logger: ^2.1.0
   url_launcher: ^6.2.4
   smooth_page_indicator: ^1.1.0

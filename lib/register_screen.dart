@@ -1,37 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 import 'package:game/theme_provider.dart';
 import 'package:game/language_provider.dart';
 import 'package:game/generated/app_localizations.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   String _errorMessage = '';
 
-  Future<void> _signIn() async {
+  Future<void> _register() async {
     try {
-      await _auth.signInWithEmailAndPassword(
+      UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
           email: _emailController.text, password: _passwordController.text);
+      await _firestore
+          .collection('users')
+          .doc(userCredential.user!.uid)
+          .set({'email': _emailController.text});
       Navigator.pushReplacementNamed(context, '/game');
     } catch (e) {
       setState(() {
-        _errorMessage = 'Invalid credentials';
+        _errorMessage = 'User already exists or other error';
       });
     }
-  }
-
-  Future<void> _register() async {
-    Navigator.pushNamed(context, '/register');
   }
 
   @override
@@ -76,10 +78,6 @@ class _LoginScreenState extends State<LoginScreen> {
               obscureText: true,
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _signIn,
-              child: Text(localizations.signIn),
-            ),
             ElevatedButton(
               onPressed: _register,
               child: Text(localizations.register),

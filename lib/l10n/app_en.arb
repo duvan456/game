@@ -2,5 +2,15 @@
     "@@locale": "en",
     "appTitle": "My App",
     "changeLanguageButton": "Change Language",
-    "title": "{name, select, titleGame{Memory Match Game} other{}}"
+    "title": "{name, select, titleGame{Memory Match Game} other{}}",
+    "titleGame": "Memory Game",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "register": "Register",
+    "currentScore": "Current Score",
+    "bestScore": "Best Score",
+    "resetGame": "Reset Game"
+
+
 }

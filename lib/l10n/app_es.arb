@@ -2,5 +2,14 @@
     "@@locale": "es",
     "appTitle": "Mi Aplicación",
     "changeLanguageButton": "Cambiar Idioma",
-    "title": "{name, select, titleGame{Juego de memoria} other{}}"
+    "title": "{name, select, titleGame{Juego de memoria} other{}}",
+    "titleGame": "Juego de Memoria",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar Sesión",
+    "register": "Registrar",
+    "currentScore": "Puntuación Actual",
+    "bestScore": "Mejor Puntuación",
+    "resetGame": "Reiniciar Juego"
+    
 }

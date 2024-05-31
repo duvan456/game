@@ -23,4 +23,28 @@ class AppLocalizationsEn extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String get titleGame => 'Memory Game';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get signIn => 'Sign In';
+
+  @override
+  String get register => 'Register';
+
+  @override
+  String get currentScore => 'Current Score';
+
+  @override
+  String get bestScore => 'Best Score';
+
+  @override
+  String get resetGame => 'Reset Game';
 }

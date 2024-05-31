@@ -110,6 +110,54 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'{name, select, titleGame{Juego de memoria} other{}}'**
   String title(String name);
+
+  /// No description provided for @titleGame.
+  ///
+  /// In es, this message translates to:
+  /// **'Juego de Memoria'**
+  String get titleGame;
+
+  /// No description provided for @email.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo Electrónico'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña'**
+  String get password;
+
+  /// No description provided for @signIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Iniciar Sesión'**
+  String get signIn;
+
+  /// No description provided for @register.
+  ///
+  /// In es, this message translates to:
+  /// **'Registrar'**
+  String get register;
+
+  /// No description provided for @currentScore.
+  ///
+  /// In es, this message translates to:
+  /// **'Puntuación Actual'**
+  String get currentScore;
+
+  /// No description provided for @bestScore.
+  ///
+  /// In es, this message translates to:
+  /// **'Mejor Puntuación'**
+  String get bestScore;
+
+  /// No description provided for @resetGame.
+  ///
+  /// In es, this message translates to:
+  /// **'Reiniciar Juego'**
+  String get resetGame;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
