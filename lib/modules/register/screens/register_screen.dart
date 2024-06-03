@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
-import 'package:game/theme_provider.dart';
-import 'package:game/language_provider.dart';
+import 'package:game/common/providers/theme_provider.dart';
+import 'package:game/common/providers/language_provider.dart';
 import 'package:game/generated/app_localizations.dart';
 
 class RegisterScreen extends StatefulWidget {

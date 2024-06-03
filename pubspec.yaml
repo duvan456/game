@@ -13,7 +13,7 @@ dependencies:
 
   # Utility Packages
   http: ^1.2.0
-  intl: ^0.18.1
+  intl: ^0.19.0
   logger: ^2.1.0
   url_launcher: ^6.2.4
   smooth_page_indicator: ^1.1.0
@@ -32,6 +32,7 @@ dependencies:
   firebase_auth: ^4.19.5
 
   #Custom Game Dependencies
+  shared_preferences: ^2.0.13
   provider: ^6.0.0
   flutter_localizations:
     sdk: flutter
